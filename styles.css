@@ -1,0 +1,289 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+body{
+ background-color: black;
+ color: white;
+ font-family: Arial, Helvetica, sans-serif;
+}
+/*
+=======================
+Estilos globais
+=======================
+*/
+
+h1{
+font-size: 4rem;
+}
+
+h2{
+font-size: 3rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+h4{
+    font-size: 1.5rem;
+}
+
+h1,h2,h3{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/*
+================
+navbar
+================
+*/
+
+.logo{
+  font-size: 30px;
+  color: white;
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+.navbar ul{
+    position: absolute;
+    top: 1%;
+    right: 0;
+    padding: 10px;
+}
+.navbar ul li {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  display: inline-block; 
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    font-weight: 700;
+}
+
+.navbar ul li:hover{
+  background-color: #ffffff;
+  transition: all .5s ease-in-out;
+}
+
+.hamburguer{
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.titulo{
+    margin: 2rem;
+}
+
+/*
+=================
+Banner
+=================
+*/
+
+.banner{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./Images/dois-caminhos.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-principal{
+    text-align: center;
+    color: #edf6ff;
+    padding: 0 3rem;
+}
+
+.banner-principal h1{
+    text-transform: uppercase;
+    color: #edf6ff;
+    margin-bottom: 2rem;
+}
+
+.btn-banner{
+    padding: 0.9rem 1.6rem;
+    font-size: 1.25rem;
+    background: #edf6ff;
+    text-decoration: none;
+    border-radius: 1rem;
+    transition: all .5s ease-in-out;
+    color: #437FC7;
+}
+
+.btn-banner:hover{
+    background: #437FC7;
+    color: #edf6ff;
+    border-color: black;
+}
+/*
+===============
+perfis
+===============
+*/
+
+.perfis{
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+}
+
+.perfil-1{
+  padding: 2rem;
+  text-align: center;
+  background: #437FC7
+}
+
+.perfil-2{
+    padding: 2rem;
+    text-align: center;
+    background: #edf6ff
+}
+
+.perfil-1 p, .perfil-2 p{
+    font-size: 1.5rem;
+    margin: 2rem;
+}
+
+.perfil-2{
+    color: black;
+}
+
+  .minha-imagem{
+      height: 50vh;
+  }
+
+/* .banner{} */
+
+/*
+====================
+layout responsivo
+====================
+*/
+
+  @media screen and (max-width:678px){
+      .perfis{
+       display: grid;
+       grid-template-columns: 1fr;
+      }
+  }
+
+  @media screen and (min-width:678px){
+    .hamburguer{
+        display: none;
+    }
+}
+
+  @media screen and (max-width:678px){
+      .navbar, .logo{
+          display: none;
+  }
+}
+
+
+/*
+======================
+bloco rosto dividido
+======================
+*/
+
+.imagem-dupla{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*
+=========================
+Linha do tempo - pessoal/profissional
+=========================
+*/
+
+
+.fundo-1{
+    background-color: black;
+}
+.fundo-2{
+    background-color: #437FC7;
+}
+
+.t-lt-pessoal{
+    margin:4rem auto;
+    color: #ffffff;
+}
+
+.t-lt-pro{
+    margin:4rem auto;
+    color: #ffffff
+}
+.eventos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0;
+}
+@media screen and (max-width:678px){
+    .eventos{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+.cena-linha-do-tempo{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cena-linha-do-tempo-2{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.cena-linha-do-tempo p{
+    margin: 2rem 5rem;
+    font-size: 1.2rem;
+    color: #edf6ff
+}
+
+.cena-linha-do-tempo-2 p{
+    margin: 2rem 5rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+
+/* .pontilhado{
+  transform: rotate(90deg);
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 4rem;
+  color: red;
+}
+
+.seta{
+    transform: rotate(90deg);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 4rem;
+    color: red;
+    position:relative;
+    top: -3%;
+    right: 0.3%;
+} */
+
+.imagem-linha-do-tempo{
+    width: 50%;
+    height: 50%;
+    clip-path: circle();
+    margin-top: 1rem;
+    object-fit: cover;
+}
