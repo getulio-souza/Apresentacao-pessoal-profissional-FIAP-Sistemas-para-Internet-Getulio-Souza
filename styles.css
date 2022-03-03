@@ -283,15 +283,6 @@ layout responsivo
   }
 }
 
-
-/*
-======================
-Imagem dupla
-======================
-*/
-
-
-
 /*
 =========================
 Linha do tempo - pessoal/profissional
@@ -323,7 +314,8 @@ Linha do tempo - pessoal/profissional
     margin: 2rem 0;
 }
 
-.cena-linha-do-tempo p, .cena-linha-do-tempo-2 p{
+.cena-linha-do-tempo p,
+.cena-linha-do-tempo-2 p{
     margin: 2rem;
     font-size: 1rem;
     color: #ffffff;

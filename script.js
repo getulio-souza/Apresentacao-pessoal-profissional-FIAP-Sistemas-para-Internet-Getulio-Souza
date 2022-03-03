@@ -10,7 +10,7 @@ menuItems.forEach((item) =>{
     item.addEventListener('click', scrollToIdOnClick);
 })
 
-//ligando com os links
+//ligando os links
 function getScrollTopByHref(element){
     const id = element.getAttribute('href');
     return document.querySelector(id).offsetTop;
@@ -45,25 +45,6 @@ window.addEventListener("scroll", ()=>{
 
     lastScrollY = window.scrollY;
 })
-
-
-// esconder menu hamburguer
-// const sidebar= document.querySelector('.sidebar');
-// let lastScrollY = window.scrollY;
-
-// window.addEventListener("scroll", ()=>{
-//     if(lastScrollY < window.scrollY){
-//      nav.classList.add("sidebar--hidden")
-//     }
-//     else{
-//         nav.classList.remove("sidebar--hidden")
-//     }
-
-//     lastScrollY = window.scrollY;
-// })
-
-
-
 
 //esconder barra lateral
 const showSidebar = document.querySelector(".hamburguer");
