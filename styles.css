@@ -5,7 +5,7 @@ box-sizing: border-box;
 }
 
 body{
- background-color: black;
+ /* background-color: black; */
  color: white;
  font-family: Arial, Helvetica, sans-serif;
 }
@@ -20,7 +20,7 @@ font-size: 4rem;
 }
 
 h2{
-font-size: 3rem;
+    font-size: 3rem;
 }
 
 h3{
@@ -32,7 +32,10 @@ h4{
 
 h1,h2,h3{
     text-align: center;
-    margin-bottom: 1rem;
+    padding-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
 }
 
 /*
@@ -41,31 +44,30 @@ navbar
 ================
 */
 
-.logo{
-  font-size: 30px;
-  color: white;
-  position: relative;
-  top: 10px;
-  left: 20px;
+.nav--hidden{
+  transform: translateY(-50px);
+  box-shadow: none;
 }
 
 .navbar ul{
-    position: absolute;
+    position: fixed;
     top: 1%;
     right: 0;
     padding: 10px;
 }
 .navbar ul li {
   padding: 0.5rem 1rem;
-  border-radius: 2rem;
   display: inline-block; 
+  border-radius: 2rem;
 }
 
 .navbar ul li a{
     text-decoration: none;
+    padding: 0.5rem 1rem;
     list-style-type: none;
-    color: black;
-    font-weight: 700;
+    color: #437FC7;
+    border-radius: 2rem;
+    font-weight: 900;
 }
 
 .navbar ul li:hover{
@@ -73,15 +75,103 @@ navbar
   transition: all .5s ease-in-out;
 }
 
+/*
+====================
+sidebar
+====================
+*/
+
+.sidebar--hidden{
+    transform: translateY(-50px);
+    box-shadow: none;
+  }
+
 .hamburguer{
     padding: 10px;
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 2%;
+    right: 2%;
+    font-size: 2rem;
+    color: black;
+    z-index: 1;
+    cursor: pointer;
+    animation: all 0.3s linear;
 }
 
-.titulo{
-    margin: 2rem;
+.sidebar{
+    background-color: #2e445f;
+    height:100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-100%);
+}
+
+.open-sidebar{
+    transform: translate(0);
+}
+
+.close-sidebar:hover{
+    color: black;
+}
+
+@media screen and (min-width:678px){
+    .sidebar{
+        display: none;
+    }
+}
+
+.complete-sidebar{
+    margin: 1rem;
+    padding: 1rem;
+    position: absolute;
+    top: 35%;
+    left:35%;
+}
+
+
+.social-sidebar ul{
+  display: flex;
+}
+
+.sidebar-icons ul li{
+    list-style-type: none;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar-icons ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.sidebar-icons ul li a:hover{
+    color: black;
+    animation: all .3s ease-in-out;
+}
+
+
+/*
+=================
+Social sidebar 
+=================
+*/
+
+.social-sidebar ul li{
+    font-size: 2rem;
+    list-style-type: none;
+    padding: 0.4rem
+}
+
+.social-sidebar ul li a{
+    color: #edf6ff
+}
+
+.social-sidebar ul li a:hover{
+    color: black;
+    transition: all .3s ease-in-out;
 }
 
 /*
@@ -129,6 +219,7 @@ Banner
     color: #edf6ff;
     border-color: black;
 }
+
 /*
 ===============
 perfis
@@ -153,7 +244,7 @@ perfis
 }
 
 .perfil-1 p, .perfil-2 p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 2rem;
 }
 
@@ -195,15 +286,11 @@ layout responsivo
 
 /*
 ======================
-bloco rosto dividido
+Imagem dupla
 ======================
 */
 
-.imagem-dupla{
-    height: 100vh;
-    width: 100%;
-    object-fit: cover;
-}
+
 
 /*
 =========================
@@ -211,79 +298,111 @@ Linha do tempo - pessoal/profissional
 =========================
 */
 
-
-.fundo-1{
+.fundo-pessoal{
     background-color: black;
 }
-.fundo-2{
+
+.fundo-profissional{
     background-color: #437FC7;
 }
 
-.t-lt-pessoal{
-    margin:4rem auto;
-    color: #ffffff;
-}
-
-.t-lt-pro{
-    margin:4rem auto;
-    color: #ffffff
-}
 .eventos{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 0;
 }
+
 @media screen and (max-width:678px){
     .eventos{
         display: grid;
         grid-template-columns: 1fr;
     }
 }
-.cena-linha-do-tempo{
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
+.cena-linha-do-tempo,
 .cena-linha-do-tempo-2{
     text-align: center;
-    margin-bottom: 2rem;
-}
-.cena-linha-do-tempo p{
-    margin: 2rem 5rem;
-    font-size: 1.2rem;
-    color: #edf6ff
+    margin: 2rem 0;
 }
 
-.cena-linha-do-tempo-2 p{
-    margin: 2rem 5rem;
-    font-size: 1.2rem;
+.cena-linha-do-tempo p, .cena-linha-do-tempo-2 p{
+    margin: 2rem;
+    font-size: 1rem;
     color: #ffffff;
 }
-
-
-/* .pontilhado{
-  transform: rotate(90deg);
-  font-weight: 700;
-  font-size: 2rem;
-  margin-top: 4rem;
-  color: red;
-}
-
-.seta{
-    transform: rotate(90deg);
-    font-weight: 700;
-    font-size: 2rem;
-    margin-top: 4rem;
-    color: red;
-    position:relative;
-    top: -3%;
-    right: 0.3%;
-} */
 
 .imagem-linha-do-tempo{
     width: 50%;
     height: 50%;
     clip-path: circle();
-    margin-top: 1rem;
     object-fit: cover;
+}
+
+.font-1{
+    color: white;
+}
+
+
+/*
+===================
+Rodapé
+===================
+*/
+
+footer{
+    background-color: #edf6ff;
+}
+
+
+.social-footer ul{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.social-footer ul li{
+    font-size: 2rem;
+    list-style-type: none;
+}
+
+.social-footer ul li a{
+    color: #437FC7;
+}
+
+.social-footer ul li a:hover{
+    color: black;
+    transition: all .3s ease-in-out;
+}
+
+.convite{
+  display: block;
+  text-align: center;
+  color: #437FC7;
+  font-weight: 700;
+}
+
+.convite h4{
+    padding: 1rem 0;
+    margin: 0 1rem;
+}
+
+.convite p{
+    font-weight: 500;
+}
+
+
+@media screen and (max-width:400px){
+    h1{
+     font-size: 2.5rem;
+    }
+    h2{
+     font-size: 1.5rem;
+    }
+    h3{
+    font-size: 1.3rem;
+    }
+    .perfil-1 p, .perfil-2 p{
+        font-size: 1rem;
+        margin: 2rem;
+    }
 }

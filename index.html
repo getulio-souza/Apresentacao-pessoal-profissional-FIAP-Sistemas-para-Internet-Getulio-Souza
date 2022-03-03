@@ -5,32 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="./fontawesome-free-5.12.1-web/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.0.0-web/fontawesome-free-6.0.0-web/css/all.min.css">
     <title>Getúlio Souza - Apresentação </title>
 </head>
 <body>
     <!-- quem sou eu-->
-    <header>
-        <!-- navbar -->
+    <div id="home">
+        <header>
+            <!-- sidebar icon -->
+            <div class="hamburguer">
+             <i class="fas fa-bars"></i>        
+            </div>
+
+            <!-- sidebar -->
+            <div class="sidebar">
+                <div class="complete-sidebar">
+                    <div class="sidebar-icons">
+                    <ul>
+                       <li><a href="#home">Home</a></li>
+                       <li><a href="#quem">Quem sou eu</a></li>
+                       <li><a href="#linha">Linha do tempo</a><li>
+                    </ul>
+                      <!-- social -->
+                    </div>
+                    <article class="social-sidebar">
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/getulio.souza.3" target="_blank">
+                                    <i class="fa fa-brands fa-facebook-square"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/getulio8101/" target="_blank">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/getulio-souza/" target="_blank">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+
+            <!-- navbar -->
             <nav class="navbar">
               <ul>
-               <li><a href="#">Home</a></li>
-               <li><a href="#">Quem sou eu </a></li>
-               <li><a href="#">Linha do tempo</a></li>
-            </ul>
-            <!-- navbar hamburguer  -->
-            <div class="hamburguer">
-                <i class="fas fa-bars"></i>        
-            </div>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#quem">Quem sou eu</a></li>
+                  <li><a href="#linha">Linha do tempo</a></li>
+                </ul>
             </nav>
+
+            <!-- banner-->
         <section class="banner">
             <article class="banner-principal">
-                <h1>Getúlio Souza</h1>
-                <a href="#" class="btn btn-banner scroll-link">Me conheça</a>
+                <h1 class="txt-type" data-wait="3000">Getúlio Souza</h1>
+                <a href="#btn-scroll" class="btn btn-banner scroll-link">Me conheça</a>
             </article>
-            </section>
+        </section>
     </header>
+  </div>
         <!-- apresentações -->
+        <div id="btn-scroll">
+        <section id="quem">
            <section class="perfis">
             <!-- pessoal -->
             <article class="perfil-1">
@@ -52,33 +92,35 @@
                 <p>Entrar no curso de Sistemas para Internet é o primeiro passo de muitos que vou dar para me tornar um desenvolvedor Front-End.</p>
             </article>
         </section>
-
+    </section>
+   </div>
     <!-- linha do tempo pessoal -->
-    <div class="fundo-1">
+    <div id="linha">
+    <div class="fundo-pessoal">
         <div class="t-lt-pessoal">
-            <h2>Linha do tempo (pessoal)</h2>
+            <h2>Como preencho meu tempo livre</h2>
         </div>
         <!-- eventos pessoais  -->
         <section class="eventos">
             <!-- evento -->
             <article class="cena-linha-do-tempo">
-                 <img src="./Images/show.jpg" alt="" class="imagem-linha-do-tempo">
-                 <!-- evento -->
-            <p>Desde que comecei a curtir rock n'roll, passei a frequentar shows de bandas cover e autorais. São nesses ambientes que me sinto realizado e feliz.</p>
+                <img src="./Images/bar-roxo.jpg" alt="" class="imagem-linha-do-tempo">
+                <!-- evento -->
+            <p>Desde que comecei a curtir rock n'roll, passei a frequentar shows de bandas cover e autorais. Nesses ambientes me sinto realizado e feliz.</p>
             </article>
         <!-- fim do evento -->
              <!-- evento -->
              <article class="cena-linha-do-tempo">
-                <img src="./Images/show.jpg" alt="" class="imagem-linha-do-tempo">
+                <img src="./Images/mediação.JPG" alt="" class="imagem-linha-do-tempo">
                 <!-- evento -->
-           <p>Desde que comecei a curtir rock n'roll, passei a frequentar shows de bandas cover e autorais. São nesses ambientes que me sinto realizado e feliz.</p>
+           <p>Encontrei na meditação uma forma de restaurar meu equilibrio mental e emocional. Graças à ela, pude aprender a observar melhor o mundo e as pessoas ao meu redor.</p>
            </article>
        <!-- fim do evento -->
            <!-- evento -->
            <article class="cena-linha-do-tempo">
-            <img src="./Images/show.jpg" alt="" class="imagem-linha-do-tempo">
+            <img src="./Images/videogame.jpg" alt="" class="imagem-linha-do-tempo">
             <!-- evento -->
-       <p>Desde que comecei a curtir rock n'roll, passei a frequentar shows de bandas cover e autorais. São nesses ambientes que me sinto realizado e feliz.</p>
+       <p>O videogame sempre foi um dos meus passatempos favoritos. A partir do momento em que começo a jogar, me desconecto do mundo e mergulho em uma realidade diferente, onde tudo é possível.</p>
        </article>
    <!-- fim do evento -->
            </section>
@@ -86,32 +128,60 @@
     <!-- fim da linha do tempo pessoal -->
     
     <!-- linha do tempo profissional -->
-     <section class="fundo-2">
+     <div class="fundo-profissional">
      <div class="t-lt-pro">
-        <h2>Linha do tempo (profissional)</h2>
+        <h2>Sobre minha carreira até aqui...</h2>
     </div>
     <!-- eventos profissionais  -->
     <section class="eventos">
         <!-- evento -->
         <article class="cena-linha-do-tempo-2">
-             <img src="./Images/show.jpg" alt="" class="imagem-linha-do-tempo">
-        <p>Desde que comecei a curtir rock n'roll, passei a frequentar shows de bandas cover e autorais. São nesses ambientes que me sinto realizado e feliz.</p>
+             <img src="./Images/mackenzie.JPG" alt="" class="imagem-linha-do-tempo">
+        <p>Durante o curso de jornalismo pude ter meu primeiro contato com a reportagem e aprendi a gravar matérias ao vivo.</p>
        </article>
     <!-- fim do evento -->
     <!-- evento -->
     <article class="cena-linha-do-tempo-2">
-        <img src="./Images/show.jpg" alt="" class="imagem-linha-do-tempo">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate sit explicabo nisi, quae quibusdam nemo perferendis atque nesciunt libero cumque.</p>
+        <img src="./Images/writing.jpg" alt="" class="imagem-linha-do-tempo">
+        <p>Mais tarde comecei a trabalhar como redator produzindo textos para um jornal, uma consultoria fiscal e duas agências (uma de publicidade e outra de marketing).</p>
     </article>
     <!-- fim do evento -->
        <!-- evento -->
        <article class="cena-linha-do-tempo-2">
-        <img src="./Images/show.jpg" alt="" class="imagem-linha-do-tempo">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate sit explicabo nisi, quae quibusdam nemo perferendis atque nesciunt libero cumque.</p>
+        <img src="./Images/coding-1.jpg" alt="" class="imagem-linha-do-tempo">
+        <p>Agora faço uma transição de carreira para programação e dou início à uma mudança profunda na minha vida profissional.</p>
     </article>
     <!-- fim do evento -->
     </section>
-     </section>
+</div>
+</div>
+<!-- rodapé -->
+<footer>
+    <article class="convite">
+        <h4>Quer me conhecer melhor?</h4>
+        <p>Visite minhas redes sociais abaixo:</p>
+    </article>
+    <article class="social-footer">
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/getulio.souza.3" target="_blank">
+                    <i class="fa fa-brands fa-facebook-square"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/getulio8101/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/getulio-souza/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+    </article>
+</footer>
 <!-- fim da linha do tempo pessoal -->
+<script src="script.js"></script>
     </body>
 </html>
