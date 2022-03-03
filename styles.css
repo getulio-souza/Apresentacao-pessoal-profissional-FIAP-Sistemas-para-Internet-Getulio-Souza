@@ -1,0 +1,400 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+body{
+ /* background-color: black; */
+ color: white;
+ font-family: Arial, Helvetica, sans-serif;
+}
+/*
+=======================
+Estilos globais
+=======================
+*/
+
+h1{
+font-size: 4rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+h4{
+    font-size: 1.5rem;
+}
+
+h1,h2,h3{
+    text-align: center;
+    padding-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+/*
+================
+navbar
+================
+*/
+
+.nav--hidden{
+  transform: translateY(-50px);
+  box-shadow: none;
+}
+
+.navbar ul{
+    position: fixed;
+    top: 1%;
+    right: 0;
+    padding: 10px;
+}
+.navbar ul li {
+  padding: 0.5rem 1rem;
+  display: inline-block; 
+  border-radius: 2rem;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    list-style-type: none;
+    color: #437FC7;
+    border-radius: 2rem;
+    font-weight: 900;
+}
+
+.navbar ul li:hover{
+  background-color: #ffffff;
+  transition: all .5s ease-in-out;
+}
+
+/*
+====================
+sidebar
+====================
+*/
+
+.sidebar--hidden{
+    transform: translateY(-50px);
+    box-shadow: none;
+  }
+
+.hamburguer{
+    padding: 10px;
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    font-size: 2rem;
+    color: black;
+    z-index: 1;
+    cursor: pointer;
+    animation: all 0.3s linear;
+}
+
+.sidebar{
+    background-color: #2e445f;
+    height:100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-100%);
+}
+
+.open-sidebar{
+    transform: translate(0);
+}
+
+.close-sidebar:hover{
+    color: black;
+}
+
+@media screen and (min-width:678px){
+    .sidebar{
+        display: none;
+    }
+}
+
+.complete-sidebar{
+    margin: 1rem;
+    padding: 1rem;
+    position: absolute;
+    top: 35%;
+    left:35%;
+}
+
+
+.social-sidebar ul{
+  display: flex;
+}
+
+.sidebar-icons ul li{
+    list-style-type: none;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar-icons ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.sidebar-icons ul li a:hover{
+    color: black;
+    animation: all .3s ease-in-out;
+}
+
+
+/*
+=================
+Social sidebar 
+=================
+*/
+
+.social-sidebar ul li{
+    font-size: 2rem;
+    list-style-type: none;
+    padding: 0.4rem
+}
+
+.social-sidebar ul li a{
+    color: #edf6ff
+}
+
+.social-sidebar ul li a:hover{
+    color: black;
+    transition: all .3s ease-in-out;
+}
+
+/*
+=================
+Banner
+=================
+*/
+
+.banner{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./Images/dois-caminhos.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-principal{
+    text-align: center;
+    color: #edf6ff;
+    padding: 0 3rem;
+}
+
+.banner-principal h1{
+    text-transform: uppercase;
+    color: #edf6ff;
+    margin-bottom: 2rem;
+}
+
+.btn-banner{
+    padding: 0.9rem 1.6rem;
+    font-size: 1.25rem;
+    background: #edf6ff;
+    text-decoration: none;
+    border-radius: 1rem;
+    transition: all .5s ease-in-out;
+    color: #437FC7;
+}
+
+.btn-banner:hover{
+    background: #437FC7;
+    color: #edf6ff;
+    border-color: black;
+}
+
+/*
+===============
+perfis
+===============
+*/
+
+.perfis{
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+}
+
+.perfil-1{
+  padding: 2rem;
+  text-align: center;
+  background: #437FC7
+}
+
+.perfil-2{
+    padding: 2rem;
+    text-align: center;
+    background: #edf6ff
+}
+
+.perfil-1 p, .perfil-2 p{
+    font-size: 1.2rem;
+    margin: 2rem;
+}
+
+.perfil-2{
+    color: black;
+}
+
+  .minha-imagem{
+      height: 50vh;
+  }
+
+/* .banner{} */
+
+/*
+====================
+layout responsivo
+====================
+*/
+
+  @media screen and (max-width:678px){
+      .perfis{
+       display: grid;
+       grid-template-columns: 1fr;
+      }
+  }
+
+  @media screen and (min-width:678px){
+    .hamburguer{
+        display: none;
+    }
+}
+
+  @media screen and (max-width:678px){
+      .navbar, .logo{
+          display: none;
+  }
+}
+
+/*
+=========================
+Linha do tempo - pessoal/profissional
+=========================
+*/
+
+.fundo-pessoal{
+    background-color: black;
+}
+
+.fundo-profissional{
+    background-color: #437FC7;
+}
+
+.eventos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width:678px){
+    .eventos{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+.cena-linha-do-tempo,
+.cena-linha-do-tempo-2{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.cena-linha-do-tempo p,
+.cena-linha-do-tempo-2 p{
+    margin: 2rem;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.imagem-linha-do-tempo{
+    width: 50%;
+    height: 50%;
+    clip-path: circle();
+    object-fit: cover;
+}
+
+.font-1{
+    color: white;
+}
+
+
+/*
+===================
+Rodapé
+===================
+*/
+
+footer{
+    background-color: #edf6ff;
+}
+
+
+.social-footer ul{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.social-footer ul li{
+    font-size: 2rem;
+    list-style-type: none;
+}
+
+.social-footer ul li a{
+    color: #437FC7;
+}
+
+.social-footer ul li a:hover{
+    color: black;
+    transition: all .3s ease-in-out;
+}
+
+.convite{
+  display: block;
+  text-align: center;
+  color: #437FC7;
+  font-weight: 700;
+}
+
+.convite h4{
+    padding: 1rem 0;
+    margin: 0 1rem;
+}
+
+.convite p{
+    font-weight: 500;
+}
+
+
+@media screen and (max-width:400px){
+    h1{
+     font-size: 2.5rem;
+    }
+    h2{
+     font-size: 1.5rem;
+    }
+    h3{
+    font-size: 1.3rem;
+    }
+    .perfil-1 p, .perfil-2 p{
+        font-size: 1rem;
+        margin: 2rem;
+    }
+}
