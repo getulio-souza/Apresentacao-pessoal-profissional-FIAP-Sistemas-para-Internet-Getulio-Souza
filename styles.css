@@ -102,10 +102,8 @@ sidebar
     background-color: #2e445f;
     height:100vh;
     width: 100vw;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateX(-100%);
+    position: absolute; /*recolhe a barra lateral*/
+    transform: translate(-100%);
 }
 
 .open-sidebar{
@@ -122,35 +120,37 @@ sidebar
     }
 }
 
-.complete-sidebar{
-    margin: 1rem;
-    padding: 1rem;
+.sidebar-menu{
     position: absolute;
-    top: 35%;
-    left:34%;
-}
-
-.sidebar-icons{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
 .social-sidebar ul{
-  display: flex;
+    display: flex;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
 }
 
-.sidebar-icons ul li{
+.sidebar-menu ul li{
     list-style-type: none;
-    margin-right: 2rem;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
-.sidebar-icons ul li a{
+
+.sidebar-menu ul li a{
     color: white;
     text-decoration: none;
     font-size: 1rem;
 }
 
-.sidebar-icons ul li a:hover{
+.sidebar-menu ul li a:hover{
     color: black;
     animation: all .3s ease-in-out;
 }
