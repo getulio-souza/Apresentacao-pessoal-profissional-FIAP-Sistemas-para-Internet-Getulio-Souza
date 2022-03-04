@@ -127,9 +127,12 @@ sidebar
     padding: 1rem;
     position: absolute;
     top: 35%;
-    left:35%;
+    left:34%;
 }
 
+.sidebar-icons{
+    text-align: center;
+}
 
 .social-sidebar ul{
   display: flex;
